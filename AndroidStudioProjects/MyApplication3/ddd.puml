@@ -1,0 +1,27 @@
+@startuml
+class CarClassifier {
+- {static} String MODEL_NAME
+- Context context
+- Interpreter interpreter
+- int modelInputWidth
+- int modelInputHeight
+- int modelInputChannel
+- int modelOutputClasses
++ void loadModel()
+- void initModelShape()
++ Pair<Integer,Float> classifyImage(Bitmap)
+- ByteBuffer preprocessImage(Bitmap)
+- Pair<Integer,Float> argmax(float[])
++ void finish()
+}
+class MainActivity {
+- TextView textView
+- CarClassifier cls
+- View.OnTouchListener listener
+# void onCreate(Bundle)
+# void onDestroy()
+}
+
+
+AppCompatActivity <|-- MainActivity
+@enduml

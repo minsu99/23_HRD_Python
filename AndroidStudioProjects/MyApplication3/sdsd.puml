@@ -1,0 +1,29 @@
+@startuml
+class MainActivity {
+- TextView textView
+~ Classifier cls
+~ View.OnTouchListener listener
+# void onCreate(Bundle)
+# void onDestroy()
+}
+class Classifier {
+~ Context context
+- {static} String MODEL_NAME
+~ Interpreter interpreter
+~ int modelInputWidth
+~ int modelInputHeight
+~ int modelInputChannel
+~ int modelOutputClasses
+- ByteBuffer loadModelFile(String)
++ void init()
+- void initModelShape()
+- Bitmap resizeBitmap(Bitmap)
+- ByteBuffer convertBitmapToGrayByteBuffer(Bitmap)
++ Pair<Integer,Float> classify(Bitmap)
+- Pair<Integer,Float> argmax(float[])
++ void finish()
+}
+
+
+AppCompatActivity <|-- MainActivity
+@enduml
