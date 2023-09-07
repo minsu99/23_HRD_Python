@@ -1,0 +1,41 @@
+@startuml
+class MainActivity {
+~ Button selectBtn
+~ TextView result
+~ ImageView imageView
+~ Bitmap bitmap
+# void onCreate(Bundle)
+~ int getMax(float[])
+~ void getPermission()
++ void onRequestPermissionsResult(int,String[],int[])
+# void onActivityResult(int,int,Intent)
+}
+class Classifier {
+- Interpreter interpreter
+- int inputImageWidth
+- int inputImageHeight
+- int numChannels
++ Interpreter getInterpreter()
++ String classifyImage(Bitmap)
+- ByteBuffer preprocessImage(Bitmap)
+- TensorBuffer runInference(ByteBuffer)
+- String postprocessOutput(TensorBuffer)
+}
+class CarActivity {
+- TextView textView
+- Classifier classifier
+- {static} int PICK_IMAGE
+- ImageView imageView
+- Button backBtn
+~ View.OnTouchListener listener
+# void onCreate(Bundle)
+# void onDestroy()
++ void onSelectImageClick(View)
+# void onActivityResult(int,int,Intent)
+- MappedByteBuffer loadModelFile(String)
+}
+
+
+AppCompatActivity <|-- MainActivity
+AppCompatActivity <|-- CarActivity
+@enduml

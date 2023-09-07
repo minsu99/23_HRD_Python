@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="8"
+            android:background="#EAE5E5" />
+
+        <Button
+            android:id="@+id/btn_SelectImage"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:onClick="onSelectImageClick"
+            android:text="사진 선택"
+            android:backgroundTint="#0431B4"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_weight="3"
+        android:background="#EAE5E5"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:background="#EAE5E5"
+            android:gravity="center"
+            android:text="TEST RESULTS"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/backBtn"
+            android:layout_width="211dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="사물분류 이동"
+            android:textAlignment="center"
+            android:textSize="20dp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>
