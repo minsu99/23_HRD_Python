@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ListViewTest2</string>
+    <string-array name="fruits">
+        <item>포도</item>
+        <item>사과</item>
+        <item>메론</item>
+        <item>배</item>
+        <item>사과</item>
+
+    </string-array>
+</resources>
