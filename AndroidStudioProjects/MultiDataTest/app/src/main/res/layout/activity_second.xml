@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity"
+    android:padding="20dp">
+
+    <Button
+        android:id="@+id/btnResult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="result" />
+
+    <TextView
+        android:id="@+id/txtV1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="V1 : "
+        android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/txtV2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="V2 : "
+        android:textSize="30dp"/>
+</androidx.appcompat.widget.LinearLayoutCompat>
