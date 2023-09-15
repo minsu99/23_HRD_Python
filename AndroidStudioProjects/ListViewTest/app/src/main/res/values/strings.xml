@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">ListViewTest</string>
+    <string-array name="subway">
+        <item>판암</item>
+        <item>시흥</item>
+        <item>대동</item>
+        <item>대전역</item>
+        <item>갈마</item>
+        <item>정부청사</item>
+        <item>시청</item>
+        <item>탄방</item>
+        <item>판암</item>
+        <item>갈마</item>
+        <item>월평</item>
+        <item>갑천</item>
+        <item>유성온천</item>
+        <item>구암</item>
+        <item>현충원</item>
+        <item>월드컵경기장</item>
+        <item>노은</item>
+        <item>지족</item>
+        <item>반석</item>
+
+
+    </string-array>
+</resources>
