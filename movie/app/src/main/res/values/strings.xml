@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ArtApp</string>
+    <style name="CustomRatingBarStyle" parent="@android:style/Widget.RatingBar">
+        <item name="android:numStars">5</item>
+        <item name="android:stepSize">0.5</item>
+    </style>
+</resources>
