@@ -1,0 +1,56 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <EditText
+        android:id="@+id/add_name_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="이름"
+        android:inputType="text" />
+    <EditText
+        android:id="@+id/add_artwork_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="작품명"
+        android:inputType="text" />
+
+    <RatingBar
+        android:id="@+id/add_rating_bar"
+        style="@style/CustomRatingBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:stepSize="0.5" />
+
+    <ImageView
+        android:id="@+id/mostVotedImageView"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:layout_gravity="center_vertical"
+        android:scaleType="fitCenter"
+        android:contentDescription="가장 많은 투표를 받은 작품 이미지"
+        android:src="@drawable/r" />
+
+    <EditText
+        android:id="@+id/add_review_edit"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:hint="리뷰작성"
+        android:inputType="text" />
+
+    <Button
+        android:id="@+id/btnReturn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:backgroundTint="#1E3047"
+        android:text="돌아가기" />
+</LinearLayout>
