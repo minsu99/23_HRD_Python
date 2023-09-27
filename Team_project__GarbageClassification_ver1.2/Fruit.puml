@@ -1,0 +1,72 @@
+@startuml
+class FruitAdapter {
+- int resourceLayout
++ void removeItem(int)
++ View getView(int,View,ViewGroup)
+}
+class fruitselection {
+~ myDBHelper myHelper
+~ EditText edtName
+~ Button btnInit
+~ SQLiteDatabase sqlDB
+~ ListView listView
+~ FruitAdapter adapter
+# void onCreate(Bundle)
+- void deleteItemFromDatabase(String,int,String)
+- void performSelect()
+}
+class fruitselection$myDBHelper {
++ void onCreate(SQLiteDatabase)
++ void onUpgrade(SQLiteDatabase,int,int)
+}
+class totalfruit {
+- ListView listView
+- TextView totalTextView
+- SQLiteDatabase sqlDB
+# void onCreate(Bundle)
+- ArrayList<FruitItem> getDataFromDatabase()
+- int calculateTotal(ArrayList<FruitItem>)
+- ArrayList<FruitItem> consolidateFruitList(ArrayList<FruitItem>)
+- ArrayList<FruitItem> removeTotalItem(ArrayList<FruitItem>)
+}
+class FruitItem {
+- String name
+- int number
+- String time
++ String getName()
++ int getNumber()
++ void setNumber(int)
++ String getTime()
++ String toString()
+}
+class calendarview {
++ String fname
++ String str
++ CalendarView calendarView
++ Button cha_Btn
++ TextView diaryTextView
++ EditText contextEditText
+# void onCreate(Bundle)
++ void checkDay(int,int,int,String)
++ void removeDiary(String)
++ void saveDiary(String)
+}
+class MainActivity {
+~ TextView result
+~ ImageView imageView
+~ Button picture
+~ int imageSize
+# void onCreate(Bundle)
++ void classifyImage(Bitmap)
++ void onActivityResult(int,int,Intent)
+}
+
+
+ArrayAdapter <|-- FruitAdapter
+AppCompatActivity <|-- fruitselection
+fruitselection +.. fruitselection$myDBHelper
+SQLiteOpenHelper <|-- fruitselection$myDBHelper
+AppCompatActivity <|-- totalfruit
+AppCompatActivity <|-- calendarview
+AppCompatActivity <|-- MainActivity
+@enduml
